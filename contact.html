@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <h1 class="section-title">Contact information</h1>
+  <section class="skills section" id="skills">
+
+    <div class="skills__container bd-grid">
+      <div>
+        <p class="skills__text"></p>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxs-paint skills__icon'></i>
+            <span class="skills__name">Siddaganga Institute of Technology,Tumkuru</span>
+          </div>
+          <div class="skills__bar skills__html">
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxs-paint skills__icon'></i>
+            <span class="skills__name">Computer Science And Engineering</span>
+          </div>
+          <div class="skills__bar skills__css">
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxs-paint skills__icon'></i>
+            <span class="skills__name">Bangalore</span>
+          </div>
+          <div class="skills__bar skills__ux">
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxs-paint skills__icon'></i>
+            <span class="skills__name">EMAIL: </span>
+            <a href="https://mail.google.com/mail/u/0/#inbox"><span class="skills__name">
+                vinayakagrawal974@gmail.com</span></a>
+          </div>
+          <div class="skills__bar skills__ux">
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxs-paint skills__icon'></i>
+            <span class="skills__name">PHONE: </span>
+            <a href=""><span class="skills__name">
+                9414147961</span></a>
+          </div>
+          <div class="skills__bar skills__ux">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact__container bd-grid">
+      <form method="post" autocomplete="off" name="google-sheet" action="mailto:vinayakagrawal974@gmail.com"
+        enctype="text/plain">
+        <input type="text" name="Name" placeholder="Name" class="contact__input" value="">
+        <input type="mail" name="Email" placeholder="Email" class="contact__input" id="">
+        <textarea type="text" name="Message" placeholder="Enter Your Message" id="" cols="0" rows="10"
+          class="contact__input"></textarea>
+        <input type="submit" value="ENTER" class="contact__button button">
+      </form>
+    </div>
+  </section>
+  <script>
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbxkEE2qzK-rfXE6APE3GEAygfUub5GOITdha0R21RX_Z-49KW4q33CVh8DoP5jzcHswRg/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+        .then(response => alert("Thanks for Contacting us..!"))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>
